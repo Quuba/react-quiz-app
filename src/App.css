@@ -1,38 +1,43 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.QuizPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Question {
+    margin-bottom: 50px;
+    color: whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AnswerBox {
+    display: flex;
+    height: 300px;
+    width: 50%;
+    padding: 15px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: azure;
+    border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.AnswerButton {
+    margin: 0 15px;
+    width: 400px;
+    height: 100px;
+    border-radius: 5px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    /*TODO: set based on the amount of text*/
+    font-size: 16px;
+}
+.EndScreen{
+    color: whitesmoke;
 }
