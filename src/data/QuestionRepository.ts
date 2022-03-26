@@ -1,5 +1,5 @@
-import Question from "../components/Question";
-import question from "../components/Question";
+import Question from "../components/QuizPage/Question";
+import question from "../components/QuizPage/Question";
 
 interface IQuestion {
     id: number;

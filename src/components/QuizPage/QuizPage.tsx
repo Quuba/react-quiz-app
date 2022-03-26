@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import Question from "./Question";
 import AnswerBox from "./AnswerBox";
-import {IAnswer} from "../data/QuestionRepository";
+import {IAnswer} from "../../data/QuestionRepository";
 
 interface QuizPageProps{
     question:string;

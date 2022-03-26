@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import AnswerButton from "./AnswerButton";
-import {IAnswer} from "../data/QuestionRepository";
+import {IAnswer} from "../../data/QuestionRepository";
 
 interface AnswerBoxProps {
     answers: IAnswer[];

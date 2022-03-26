@@ -38,6 +38,68 @@
     /*TODO: set based on the amount of text*/
     font-size: 16px;
 }
-.EndScreen{
+
+.EndScreen {
     color: whitesmoke;
+}
+
+.AddQuestionPage {
+    background-color: whitesmoke;
+    width: 60%;
+    height: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 50px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.AddQuestionPage .AnswerInputBox, .QuestionInputBox {
+    background-color: #282c34;
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.QuestionInputBox input {
+    width: 90%;
+    /*height: 80%;*/
+    border: 0px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.QuestionInputBox input::placeholder{
+    text-align: center;
+}
+
+
+.AnswerInputBox input[type=text] {
+    width: 200px;
+    border: 0px;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+.AnswerInputBox input[type=text]::placeholder{
+    text-align: center;
+}
+
+.AnswerInputBox input[type=checkbox] {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1
+
 }
