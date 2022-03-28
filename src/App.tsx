@@ -19,7 +19,7 @@ enum Page {
 let questionIndex: number = 0;
 let goodAnswers: number = 0;
 let wrongAnswers: number = 0;
-let maxQuestionCount: number = 0;
+let maxQuestionCount: number = 5;
 
 
 let questions: any = [];
@@ -61,17 +61,13 @@ function App() {
     const [currentPage, setPage] = useState<Page>(Page.Quiz)
 
     useEffect(() => {
-        fetch('https://springboottest234.herokuapp.com/all')
+        fetch('https://springboottest234.herokuapp.com/random/'+maxQuestionCount)
             .then(response => response.json())
             .then(response => {
                     questions = response.map((res: any) => fromJson(res))
                     setQuestion(fromJson(questions[questionIndex]))
                 }
             )
-        fetch('https://springboottest234.herokuapp.com/all/count')
-            .then(response => response.json()).then(
-            res => maxQuestionCount = res
-        )
     }, [currentPage])
 
     function onCorrectAnswer() {
@@ -127,7 +123,7 @@ function App() {
                     <QuizPage questionData={question} onCorrectAnswer={onCorrectAnswer} onWrongAnswer={onWrongAnswer}/>
                 </div>
             );
-            break;
+
         case Page.EndScreen:
             return (
                 <div className="App">
@@ -135,14 +131,12 @@ function App() {
                                onAddQuestion={GoToAddQuestionPage}/>
                 </div>
             );
-            break;
         case Page.AddQuestionScreen:
             return (
                 <div className="App">
                     <AddQuestionPage/>
                 </div>
             );
-            break;
     }
 
 

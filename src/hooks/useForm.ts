@@ -29,10 +29,17 @@ export const useForm = (callback:any, initialState={
         await callback(); // triggering the callback
     };
 
+    // onSubmit
+    const onReset = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setValues(initialState);
+    };
+
     // return values
     return {
         onChange,
         onSubmit,
+        onReset,
         values,
     };
 }

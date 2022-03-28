@@ -59,40 +59,76 @@
     flex-direction: column;
     align-items: center;
 
+    min-width: 300px;
 }
 
-.AddQuestionPage .AnswerInputBox, .QuestionInputBox {
+.AddQuestionPage form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.AddQuestionPage form input[type=submit] {
     background-color: #282c34;
-    width: 400px;
+    color: whitesmoke;
+    font-size: 100%;
+    width: 50%;
+    margin-top: 10px;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+
+    min-width: 130px;
+    box-shadow: 5px 5px darkslategrey, 4px 4px darkslategrey;
+    /*box-shadow:6px 6px grey, 6px 6px white , 0px 20px  cyan;*/
+}
+
+.AddQuestionPage form input[type=submit]:hover {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.AnswerInputBox, .QuestionInputBox {
+    background-color: #282c34;
+    width: 100%;
     height: 40px;
     border-radius: 15px;
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    min-width: 260px;
 }
 
 .QuestionInputBox input {
     width: 90%;
     /*height: 80%;*/
-    border: 0px;
+    border: 0;
     padding: 3px;
     border-radius: 5px;
 }
 
-.QuestionInputBox input::placeholder{
+.QuestionInputBox input::placeholder {
     text-align: center;
 }
 
 
 .AnswerInputBox input[type=text] {
-    width: 200px;
-    border: 0px;
+    width: 80%;
+    border: 0;
     padding: 3px;
     border-radius: 5px;
 
 }
-.AnswerInputBox input[type=text]::placeholder{
+
+
+.AnswerInputBox input[type=text]::placeholder {
     text-align: center;
 }
 
@@ -101,5 +137,4 @@
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.1
-
 }
